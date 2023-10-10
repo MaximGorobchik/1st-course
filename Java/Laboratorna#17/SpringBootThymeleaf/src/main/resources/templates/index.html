@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Welcome</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+   </head>
+   <body>
+      <h1>Welcome</h1>
+      <h2 th:utext="${message}">..!..</h2>
+      
+      <!--  
+      
+         In Thymeleaf the equivalent of
+         JSP's ${pageContext.request.contextPath}/edit.html
+         would be @{/edit.html}
+         
+         -->
+         
+      <a th:href="@{/personList}">Person List</a>  
+      
+   </body>
+   
+</html>
+ 
+personList.html
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Person List</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+   </head>
+   <body>
+      <h1>Person List</h1>
+      <a href="addPerson">Add Person</a>
+      <br/><br/>
+      <div>
+         <table border="1">
+            <tr>
+               <th>First Name</th>
+               <th>Last Name</th>
+            </tr>
+            <tr th:each ="person : ${persons}">
+               <td th:utext="${person.firstName}">...</td>
+               <td th:utext="${person.lastName}">...</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

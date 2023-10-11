@@ -1,0 +1,4 @@
+2023-10-11T12:05:14.506+02:00  WARN 13500 --- [http-nio-8080-exec-1] o.o.sblogging.controller.MainController  : This is WARN
+2023-10-11T12:05:14.508+02:00 ERROR 13500 --- [http-nio-8080-exec-1] o.o.sblogging.controller.MainController  : This is ERROR
+2023-10-11T12:06:53.931+02:00  WARN 7072 --- [http-nio-8080-exec-1] o.o.sblogging.controller.MainController  : This is WARN
+2023-10-11T12:06:53.944+02:00 ERROR 7072 --- [http-nio-8080-exec-1] o.o.sblogging.controller.MainController  : This is ERROR
